@@ -7,12 +7,13 @@ import dagger.Component;
 /**
  * Created By Eslam Ghazy on 11/23/2022
  */
+
+// @Component =>  to tell dagger what do you need to execute from this code
 @Component
 public interface CarComponent {
 
     Car getCar();
 
-    Engine getEngine();
-
+    // it's necessary to tell dagger where return your callback or to tell dagger where find injection fields
     void inject(MainActivity mainActivity);
 }

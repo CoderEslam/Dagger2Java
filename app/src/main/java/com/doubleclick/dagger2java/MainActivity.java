@@ -32,10 +32,9 @@ public class MainActivity extends AppCompatActivity {
         car.drive();*/
 
         CarComponent component = DaggerCarComponent.create();
-        component.inject(this); // nessassry to tell dagger where return your callback
+        component.inject(this); // it's necessary to tell dagger where return your callback or to tell dagger where find injection fields
 //        car = component.getCar();
 
         carInjection.drive();
-        component.getEngine();
     }
 }
