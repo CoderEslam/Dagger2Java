@@ -9,7 +9,7 @@ import dagger.Component;
  */
 
 // @Component =>  to tell dagger what do you need to execute from this code
-@Component
+@Component(modules = {WheelsModule.class, EngineModule.class})
 public interface CarComponent {
 
     Car getCar();

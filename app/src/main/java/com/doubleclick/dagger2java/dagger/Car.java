@@ -20,14 +20,13 @@ public class Car {
      * */
 
     private static final String TAG = "Car";
-    @Inject
     Engine engine;
-    @Inject
     Wheels wheels;
 
     @Inject
-    public Car(Wheels wheels) {
+    public Car(Engine engine, Wheels wheels) {
         this.wheels = wheels;
+        this.engine=engine;
         Log.e(TAG, "Car: Constarctor");
     }
 
@@ -38,11 +37,9 @@ public class Car {
         Log.e(TAG, "enableRemote: " + remote.toString());
     }
 
-//    @Inject
-//    public Car() {
-//    }
 
     public void drive() {
+        engine.start();
         Log.e(TAG, "driving..." + toString());
     }
 
